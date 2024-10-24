@@ -8,9 +8,9 @@ import Category2 from "@/assets/category2.png";
 import Category3 from "@/assets/category3.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
-import OurClasses from "@/scenes/ourClasses";
-import Benefits from "@/scenes/benefits";
-import ContactUs from "@/scenes/contactUs";
+import DichVu from "@/scenes/DichVu";
+import GioiThieu from "@/scenes/GioiThieu";
+import LienHe from "@/scenes/LienHe";
 import Footer from "@/scenes/footer";
 import Product from "@/scenes/product";
 
@@ -22,11 +22,11 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section id="trangchu" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.trangchu)}
       >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
@@ -71,8 +71,8 @@ const Home = ({ setSelectedPage }: Props) => {
             </ActionButton>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
+              onClick={() => setSelectedPage(SelectedPage.lienhe)}
+              href={`#${SelectedPage.lienhe}`}
             >
               <p>Tư Vấn</p>
             </AnchorLink>
@@ -103,16 +103,16 @@ const Home = ({ setSelectedPage }: Props) => {
       )}
       {/* các thành phần khác  */}
       <div className="pt-10">
-        <Product />
+        <Product setSelectedPage={setSelectedPage} />
       </div>
       <div className="">
-        <Benefits setSelectedPage={setSelectedPage} />
+        <GioiThieu setSelectedPage={setSelectedPage} />
       </div>
       <div className="">
-        <OurClasses setSelectedPage={setSelectedPage} />
+        <DichVu setSelectedPage={setSelectedPage} />
       </div>
       <div className="">
-        <ContactUs setSelectedPage={setSelectedPage} />
+        <LienHe setSelectedPage={setSelectedPage} />
       </div>
       <Footer />
     </section>

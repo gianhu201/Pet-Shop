@@ -7,6 +7,7 @@ import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
 import Class from "./Class";
+import HText from "@/shared/HText";
 
 const classes: Array<ClassType> = [
   {
@@ -49,11 +50,11 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const OurClasses = ({ setSelectedPage }: Props) => {
+const DichVu = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-14">
+    <section id="dichvu" className="w-full bg-primary-100 py-14">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.dichvu)}
       >
         <motion.div
           className="mx-auto w-5/6"
@@ -66,7 +67,8 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="md:w-3/5">
+          <div className="md:w-3/5 ">
+             <HText>Chúng Tôi Có Gì?</HText>
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
@@ -86,4 +88,4 @@ const OurClasses = ({ setSelectedPage }: Props) => {
   );
 };
 
-export default OurClasses;
+export default DichVu;

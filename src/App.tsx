@@ -1,9 +1,9 @@
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
-import OurClasses from "@/scenes/ourClasses";
-import Benefits from "@/scenes/benefits";
-import ContactUs from "@/scenes/contactUs";
-import Footer from "@/scenes/footer";
+import DichVu from "@/scenes/DichVu";
+import GioiThieu from "@/scenes/GioiThieu";
+import LienHe from "@/scenes/LienHe";
+// import Footer from "@/scenes/footer";
 import Product from "@/scenes/product";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ import Cart from "@/scenes/cart";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home
+    SelectedPage.trangchu
   );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
@@ -21,7 +21,7 @@ function App() {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage(SelectedPage.Home);
+        setSelectedPage(SelectedPage.trangchu);
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
@@ -40,10 +40,10 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home setSelectedPage={setSelectedPage} />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/benefits" element={<Benefits setSelectedPage={setSelectedPage} />} />
-          <Route path="/our-classes" element={<OurClasses setSelectedPage={setSelectedPage} />} />
-          <Route path="/contact-us" element={<ContactUs setSelectedPage={setSelectedPage} />} />
+          <Route path="/product" element={<Product setSelectedPage={setSelectedPage} />} />
+          <Route path="/gioi-thieu" element={<GioiThieu setSelectedPage={setSelectedPage} />} />
+          <Route path="/dich-vu" element={<DichVu setSelectedPage={setSelectedPage} />} />
+          <Route path="/lien-he" element={<LienHe setSelectedPage={setSelectedPage} />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
 

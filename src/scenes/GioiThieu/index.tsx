@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import Spa from "@/assets/spa.png";
 
 
-const benefits: Array<BenefitType> = [
+const gioithieu: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
@@ -42,11 +42,11 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefits = ({ setSelectedPage }: Props) => {
+const GioiThieu = ({ setSelectedPage }: Props) => {
   return (
-    <section id="benefits" className="bg-gray-20 min-h-full px-24 py-20">
+    <section id="gioithieu" className="bg-gray-20 min-h-full px-24 py-20">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.gioithieu)}
       >
         {/* HEADER */}
         <motion.div
@@ -132,4 +132,4 @@ const Benefits = ({ setSelectedPage }: Props) => {
   );
 };
 
-export default Benefits;
+export default GioiThieu;

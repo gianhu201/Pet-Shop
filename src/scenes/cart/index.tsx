@@ -47,13 +47,15 @@ export default function Cart() {
                     </button>
                   </div>
                 </div>
-                <button onClick={() => removePet(item.id)}
-                  variant="destructive"
-                  size="sm"
-                  className="ml-4 bg-red-600 hover:bg-red-700 text-white"
-                >
-                  Remove
-                </button>
+                <button 
+  onClick={() => removePet(item.id)}
+  variant="destructive"
+  size="sm"
+  className="ml-4 bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-4 py-2 transition duration-200"
+   >
+     Remove
+     </button>
+
               </div>
             ))}
           </div>

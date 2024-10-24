@@ -7,9 +7,18 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Linkk = ({ page, selectedPage, setSelectedPage }: Props) => {
-  const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+const removeVietnameseTones = (str: string) => {
+  return str
+    .normalize("NFD") //tách các ký tự có dấu và phần dấu riêng biệt
+    .replace(/[\u0300-\u036f]/g, "") // Loại bỏ dấu thanh
+    .replace(/ơ/g, "o") // thay the
+    .replace(/ê/g, "e") 
+};
 
+const Linkk = ({ page, selectedPage, setSelectedPage }: Props) => {
+  // chuyen toan bo chu hoa sang chu thuong, loai bo khoan trang, ép kieu gtri nhan duoc
+  const lowerCasePage = removeVietnameseTones(page.toLowerCase().replace(/ /g, "")) as SelectedPage;
+console.log("lowerCasePage: ", lowerCasePage); 
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}

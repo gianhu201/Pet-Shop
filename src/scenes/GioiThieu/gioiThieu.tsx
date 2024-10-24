@@ -14,7 +14,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
+const GioiThieu = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
@@ -30,8 +30,8 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
       <p className="my-3">{description}</p>
       <AnchorLink
         className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-        onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-        href={`#${SelectedPage.ContactUs}`}
+        onClick={() => setSelectedPage(SelectedPage.lienhe)}
+        href={`#${SelectedPage.lienhe}`}
       >
         <p>Learn More</p>
       </AnchorLink>
@@ -39,4 +39,4 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
   );
 };
 
-export default Benefit;
+export default GioiThieu;

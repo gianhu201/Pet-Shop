@@ -41,12 +41,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                   <Linkk
-                    page="Đánh Giá"
+                    page="Các Bé"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                   <Linkk
+                    page="Giới thiệu"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Linkk
-                    page="Các Bé"
+                    page="Dịch Vụ"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
@@ -99,26 +104,31 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           {/* MENU ITEMS */}
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-            <Linkk
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Linkk
-              page="Benefits"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Linkk
-              page="Our Classes"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Linkk
-              page="Contact Us"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+          <Linkk
+                    page="Trang Chủ"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Linkk
+                    page="Các Bé"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                   <Linkk
+                    page="Giới thiệu"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Linkk
+                    page="Dịch Vụ"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Linkk
+                    page="Liên Hệ"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
           </div>
         </div>
       )}
